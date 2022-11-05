@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Component/Pages/Home';
 import Features from './Component/Pages/Features';
 import Pricing from './Component/Pages/Pricing';
+import UseRef from './Component/UseRef/UseRef';
 function App() {
   return (
 <>
@@ -15,7 +16,7 @@ function App() {
 <Route path='/' element={<Home />} />
 <Route path='/Features' element={<Features/>} />
 <Route path='/Pricing' element={<Pricing/>} />
-
+<Route path='/useref' element={<UseRef/>} />
 
 
 </Routes>

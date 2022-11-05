@@ -1,8 +1,30 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 
 const Home = () => {
+  const [num,setNum]=useState(0)
+
+  useEffect(()=>{
+    console.log("Component didMount this function run one time only starte time");
+  },[])
+
+  const updateNum=()=>{
+    return(
+      console.log("if you want to do any update written inside function")
+    )
+  }
+  useEffect(()=>{
+    updateNum()
+    console.log("This is component updateMount This function execute how when we will do any edit on application");
+  },[num])
+
+  useEffect(()=>{
+    return ()=>{
+      console.log("when we will jump one link to another link then this functio run")
+    };
+  },[])
     return (
         <div>
 
@@ -18,7 +40,17 @@ const Home = () => {
       </Card.Body>
     </Card>
 
+<Button variant="danger" onClick={()=>setNum(num+1)} >Increment + </Button>
+<h2>{num} </h2>
+<Button variant="primary" onClick={()=>setNum(num-1)} >Decrement - </Button>
+<button onClick={()=>setNum(0)} >Reset</button>
+<br />
+<br />
+<br />
+
+
         </div>
+        
     );
 };
 

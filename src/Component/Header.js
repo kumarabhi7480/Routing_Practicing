@@ -12,10 +12,9 @@ const Header =()=>{
             
               <Link to="/">Home </Link>
             
-            
             <Link to="/features">Features </Link>
             <Link to="/pricing">Pricing </Link>
-            <Link to="/pricing">price </Link>
+            <Link to="/useref">UseRef </Link>
             
         </Container>
       </Navbar>
